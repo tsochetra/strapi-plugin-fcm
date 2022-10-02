@@ -18,24 +18,6 @@
     "body": {
       "type": "text"
     },
-    "payload": {
-      "type": "json"
-    },
-    "image": {
-      "type": "string"
-    },
-    "targetType": {
-      "type": "enumeration",
-      "enum": [
-        "topics",
-        "tokens"
-      ],
-      "required": true
-    },
-    "target": {
-      "type": "text",
-      "required": true
-    },
     "response": {
       "type": "json"
     }
