@@ -4,7 +4,7 @@
   "info": {
     "singularName": "fcm-plugin-configuration",
     "pluralName": "fcm-plugin-configurations",
-    "displayName": "FCM Plugin Configuration"
+    "displayName": "Notification Configuration"
   },
   "options": {
     "draftAndPublish": false,
