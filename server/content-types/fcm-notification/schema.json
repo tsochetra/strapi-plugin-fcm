@@ -16,7 +16,8 @@
       "required": true
     },
     "body": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "response": {
       "type": "json"
