@@ -4,7 +4,7 @@
   "info": {
     "singularName": "fcm-topic",
     "pluralName": "fcm-topics",
-    "displayName": "FCM Topic"
+    "displayName": "Notification Topic"
   },
   "options": {
     "draftAndPublish": true,
