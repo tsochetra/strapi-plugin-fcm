@@ -12,40 +12,15 @@ module.exports = {
         console.log('send to FCM', entry);
         let payload = {
             notification: {
-                title: entry.title
+                title: entry.title,
+                body: entry.body
             }
         };
-        if (entry.body) {
-            payload.notification.body = entry.body;
-        }
-        if (entry.image) {
-            payload.notification.imageUrl = entry.image;
-        }
 
-        if (entry.payload) {
-            payload = { ...payload, ...entry.payload };
-        }
-
-        // console.log('payload', payload, 'target is ', entry.target);
         let res = null;
-        if (entry.targetType === 'tokens') {
-            const tokens = entry.target.split(',');
-            if (tokens.length > 1) {
-                res = await admin.messaging().sendMulticast({ tokens }, payload);
-            } else {
-                res = await admin.messaging().sendToDevice(entry.target, payload);
-            }
-        } else {
-            const topics = entry.target.split(',');
-            if (topics.length > 1) {
-                res = await admin.messaging().sendToCondition(
-                    topics.map(t => `'${t}' in topics`).join(' || '),
-                    payload
-                );
-            } else {
-                res = await admin.messaging().sendToTopic(entry.target, payload);
-            }
-        }
+      
+        res = await admin.messaging().sendToTopic("all_users", payload);
+      
         console.log('send to FCM res', JSON.stringify(res));
         return res;
     },
