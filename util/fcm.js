@@ -13,16 +13,9 @@ module.exports = {
         let payload = {
             notification: {
                 title: entry.title,
-                body: entry.body
-            },
-            apns: {
-              payload: {
-                  aps: { sound: 'default' }
-              }
-            },
-            android: {
-              priority: 'high',
-              notification: { sound: 'default' }
+                body: entry.body,
+                sound: "default",
+                color: "#063159"
             }
         };
 
