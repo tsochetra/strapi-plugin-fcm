@@ -14,6 +14,15 @@ module.exports = {
             notification: {
                 title: entry.title,
                 body: entry.body
+            },
+            apns: {
+              payload: {
+                  aps: { sound: 'default' }
+              }
+            },
+            android: {
+              priority: 'high',
+              notification: { sound: 'default' }
             }
         };
 
