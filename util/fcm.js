@@ -16,6 +16,9 @@ module.exports = {
                 body: entry.body,
                 sound: "default",
                 color: "#063159"
+            },
+            data: {
+              type: "list"
             }
         };
 
