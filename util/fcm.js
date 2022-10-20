@@ -21,6 +21,11 @@ module.exports = {
               type: "list"
             },
             topic: topic,
+            android:{
+              notification: {
+               color: "#063159"
+              }
+            },
             apns: {
               payload: {
                 aps: {
