@@ -10,6 +10,8 @@ module.exports = {
     * */
     send: async (entry) => {
         console.log('send to FCM', entry);
+        let topic = "all_users";
+      
         let payload = {
             notification: {
                 title: entry.title,
@@ -20,6 +22,7 @@ module.exports = {
             data: {
               type: "list"
             },
+            topic: topic,
             apns: {
               payload: {
                 aps: {
@@ -31,7 +34,7 @@ module.exports = {
 
         let res = null;
       
-        res = await admin.messaging().sendToTopic("all_users", payload);
+        res = await admin.messaging().send(payload);
       
         console.log('send to FCM res', JSON.stringify(res));
         return res;
