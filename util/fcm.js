@@ -15,9 +15,7 @@ module.exports = {
         let payload = {
             notification: {
                 title: entry.title,
-                body: entry.body,
-                sound: "default",
-                color: "#063159"
+                body: entry.body
             },
             data: {
               type: "list"
@@ -26,7 +24,9 @@ module.exports = {
             apns: {
               payload: {
                 aps: {
-                  contentAvailable: true,
+                  contentAvailable: true,                  
+                  sound: "default",
+                  color: "#063159"
                 },
               },
             }
