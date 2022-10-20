@@ -19,6 +19,13 @@ module.exports = {
             },
             data: {
               type: "list"
+            },
+            apns: {
+              payload: {
+                aps: {
+                  contentAvailable: true,
+                },
+              },
             }
         };
 
