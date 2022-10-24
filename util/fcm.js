@@ -22,6 +22,7 @@ module.exports = {
             },
             topic: topic,
             android:{
+              priority: 'high',
               notification: {
                color: "#063159"
               }
