@@ -10,7 +10,7 @@ module.exports = {
     * */
     send: async (entry) => {
         console.log('send to FCM', entry);
-        let topic = "all_users";
+        let topic = "dev";
       
         let payload = {
             notification: {
